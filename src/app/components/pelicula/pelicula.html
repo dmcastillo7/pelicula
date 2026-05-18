@@ -1,15 +1,15 @@
 <div class="tarjeta">
+  <!-- Se remplaza la URL estática por la propiedad de la imagen- Dayra Mosquera -->
+  <img [src]="datosPelicula.imagen" alt="Portada de {{ datosPelicula.nombre }}">
 
-  <img src="https://m.media-amazon.com/images/I/91kFYg4fX3L.jpg">
+  <!-- Reemplazo los textos fijos usando interpolación {{ }} Dayra Mosquera-->
+  <h2>{{ datosPelicula.nombre }}</h2>
 
-  <h2>Interstellar</h2>
+  <p>{{ datosPelicula.genero }}</p>
 
-  <p>Ciencia ficción</p>
-
-  <p>2014</p>
+  <p>{{ datosPelicula.anio }}</p>
 
   <button>
     Ver Película
   </button>
-
 </div>
