@@ -4,12 +4,41 @@
 
   <div class="contenedor">
 
-    <!-- Recorremos la lista de películas dinámicamente -->
-    @for (pelicula of peliculas; track pelicula.nombre) {
-      <!-- El Padre envía los datos usando los corchetes [datosPelicula] hacia el @Input del Hijo -->
-      <app-pelicula [datosPelicula]="pelicula"></app-pelicula>
+     @for (pelicula of peliculas; track pelicula.nombre) {
+
+      <app-pelicula
+        [datosPelicula]="pelicula"
+        (peliculaSeleccionada)="mostrarPelicula($event)">
+      </app-pelicula>
+
     }
 
   </div>
+
+  <!-- Información dinámica -->
+  @if (peliculaElegida) {
+
+  <div class="detalle">
+
+    <h2>{{ peliculaElegida.nombre }}</h2>
+
+    <p>
+      <strong>Género:</strong>
+      {{ peliculaElegida.genero }}
+    </p>
+
+    <p>
+      <strong>Año:</strong>
+      {{ peliculaElegida.anio }}
+    </p>
+
+    <p>
+      <strong>Sinopsis:</strong>
+      {{ peliculaElegida.sinopsis }}
+    </p>
+
+  </div>
+
+}
 
 </div>

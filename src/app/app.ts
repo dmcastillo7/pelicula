@@ -16,25 +16,39 @@ export class App {
       nombre: 'Interstellar',
       genero: 'Ciencia Ficción/Aventura',
       anio: '2014',
-      imagen: 'https://m.media-amazon.com/images/I/91kFYg4fX3L.jpg'
+      imagen: 'https://m.media-amazon.com/images/I/91kFYg4fX3L.jpg',
+      sinopsis: 'Un grupo de astronautas viaja por un agujero de gusano para salvar a la humanidad.'
     },
     {
       nombre: 'Avengers Endgame',
       genero: 'Acción/Ciencia Ficción',
       anio: '2019',
-      imagen: 'https://m.media-amazon.com/images/I/81ExhpBEbHL.jpg'
+      imagen: 'https://m.media-amazon.com/images/I/81ExhpBEbHL.jpg',
+      sinopsis: 'Los Avengers intentan revertir el daño causado por Thanos y restaurar el universo.'
     },
     {
       nombre: 'Joker',
       genero: 'Crimen/Suspenso',
       anio: '2024',
-      imagen: 'https://preview.redd.it/new-poster-for-joker-folie-%C3%A0-deux-v0-7hn9ng3lammd1.jpeg?width=640&crop=smart&auto=webp&s=6e3df0224b8a74a953674ef94c948ad942675018'
+      imagen: 'https://preview.redd.it/new-poster-for-joker-folie-%C3%A0-deux-v0-7hn9ng3lammd1.jpeg?width=640&crop=smart&auto=webp&s=6e3df0224b8a74a953674ef94c948ad942675018',
+      sinopsis: 'Arthur Fleck enfrenta el rechazo social mientras se transforma en el Joker.'
     },
     {
       nombre: 'Project Hail Mary',
       genero: 'Ciencia Ficción/Aventura',
       anio: '2026',
-      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2RjKXB8Y71bO52umxhR3gKTbVw0Y2HvJfEg&s'
+      imagen: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2RjKXB8Y71bO52umxhR3gKTbVw0Y2HvJfEg&s',
+      sinopsis: 'Un astronauta despierta solo en el espacio con una misión para salvar la Tierra.'
     }
   ];
+
+  // Variable para guardar la película seleccionada
+  peliculaElegida: any = null;
+
+  // Método que recibe el dato enviado desde el hijo
+  mostrarPelicula(pelicula: any) {
+
+  this.peliculaElegida = pelicula;
+
+  }
 }
